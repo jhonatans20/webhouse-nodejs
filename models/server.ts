@@ -1,4 +1,5 @@
 import express, { Application } from 'express';
+import redesRoutes from '../routes/redes';
 import userRoutes from '../routes/usuario';
 import cors from 'cors';
 
@@ -10,7 +11,8 @@ class Server {
     private app: Application;
     private port: string;
     private apiPaths = {
-        usuarios: '/api/usuarios'
+        usuarios: '/api/usuarios',
+        redes: '/api/redes',
     }
 
     constructor() {
@@ -31,7 +33,7 @@ class Server {
             console.log('Database online');
 
         } catch (error) {
-            throw new Error( error );
+            console.log(error);
         }
 
     }
@@ -51,6 +53,7 @@ class Server {
 
     routes() {
         this.app.use( this.apiPaths.usuarios, userRoutes )
+        this.app.use( this.apiPaths.redes, redesRoutes )
     }
 
 

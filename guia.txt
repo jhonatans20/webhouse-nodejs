@@ -1,0 +1,6 @@
+npm install
+#instalar en diferentes terminales el typescript y en nodemon
+#debe tener instalado el typescript "npm install -g typescript"
+ejecutar "tsc --watch"
+#debe tener instalado el typescript "npm install -g nodemon"
+ejecutar "nodemon ./dist/app"
