@@ -16,7 +16,8 @@ const Redes = db.define('redes', {
         type: DataTypes.STRING
     },
     estadoRed: {
-        type: DataTypes.BOOLEAN
+        type: DataTypes.BOOLEAN,
+        defaultValue: 1
     }
 });
 
